@@ -181,7 +181,7 @@ function Register() {
                       <span>or identity provider</span>
                   </div>
 
-                  <a href=`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/auth/google` className="btn btn-google w-100 py-2 rounded-3 d-flex align-items-center justify-content-center shadow-sm mb-4 animate-fade-in-up delay-500">
+                  <a href={`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/auth/google`} className="btn btn-google w-100 py-2 rounded-3 d-flex align-items-center justify-content-center shadow-sm mb-4 animate-fade-in-up delay-500">
                       <svg className="me-2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 48 48">
                           <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
                           <path fill="#4285F4" d="M46.5 24c0-1.55-.15-3.24-.47-4.77H24v9.03h12.75c-.55 2.97-2.22 5.5-4.78 7.21l7.45 5.78c4.35-4.01 6.98-9.92 6.98-17.25z"/>
