@@ -28,7 +28,7 @@ app.use("/api/assistant", assistantRoutes);
 app.use("/api/city", cityRoutes);
 
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://harishkota0308_db_user:Harish12@opticrop.eo1zooh.mongodb.net/?appName=Opticrop";
+const MONGODB_URI = process.env.MONGODB_URI || process.env.MONGO_URI || "mongodb+srv://harishkota0308_db_user:Harish12@opticrop.eo1zooh.mongodb.net/?appName=Opticrop";
 mongoose
   .connect(MONGODB_URI)
   .then(() => {
