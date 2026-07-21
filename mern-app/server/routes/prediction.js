@@ -23,7 +23,7 @@ router.post("/predict", auth, async (req, res) => {
 
   let options = {
     mode: "text",
-    pythonPath: "C:\\Program Files\\Python311\\python.exe", // use system python
+    pythonPath: process.env.NODE_ENV === 'production' ? 'python3' : 'python',
     pythonOptions: ["-u"], // get print results in real-time
     args: [JSON.stringify(inputData)]
   };
