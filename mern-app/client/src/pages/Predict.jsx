@@ -40,7 +40,7 @@ function Predict() {
 
   const fetchCities = async (query) => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/city/city-suggest?q=${query}`);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/city/city-suggest?q=${query}`);
       setSuggestions(res.data);
     } catch (err) {
       console.error("City fetch error:", err);
@@ -69,7 +69,7 @@ function Predict() {
     
     setLoadingCity(true);
     try {
-      const res = await axios.get(`http://localhost:5000/api/weather?city=${encodeURIComponent(cleanCity)}`);
+      const res = await axios.get(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/weather?city=${encodeURIComponent(cleanCity)}`);
       if (res.data.error) {
         console.error(res.data.error);
         return;
@@ -98,7 +98,7 @@ function Predict() {
     setLoadingSubmit(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('http://localhost:5000/api/prediction/predict', formData, {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/prediction/predict`, formData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       navigate('/result', { state: res.data });

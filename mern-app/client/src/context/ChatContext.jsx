@@ -65,7 +65,7 @@ export const ChatProvider = ({ children }) => {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/assistant/chat', { message: userMsg });
+      const res = await axios.post(`${import.meta.env.VITE_API_URL || 'http://localhost:5000'}/api/assistant/chat`, { message: userMsg });
       let replyText = res.data.reply;
       
       replyText = replyText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
