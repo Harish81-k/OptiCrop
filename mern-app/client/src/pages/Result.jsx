@@ -88,19 +88,19 @@ function Result() {
                               <div className="bg-light p-3 rounded-3 border">
                                   <div className="metric-row">
                                       <span className="metric-label">Nitrogen (N)</span>
-                                      <span className="metric-value">{data.inputs?.N || '-'} <span className="text-muted fw-normal small">mg/kg</span></span>
+                                      <span className="metric-value">{data.N || '-'} <span className="text-muted fw-normal small">mg/kg</span></span>
                                   </div>
                                   <div className="metric-row">
                                       <span className="metric-label">Phosphorus (P)</span>
-                                      <span className="metric-value">{data.inputs?.P || '-'} <span className="text-muted fw-normal small">mg/kg</span></span>
+                                      <span className="metric-value">{data.P || '-'} <span className="text-muted fw-normal small">mg/kg</span></span>
                                   </div>
                                   <div className="metric-row">
                                       <span className="metric-label">Potassium (K)</span>
-                                      <span className="metric-value">{data.inputs?.K || '-'} <span className="text-muted fw-normal small">mg/kg</span></span>
+                                      <span className="metric-value">{data.K || '-'} <span className="text-muted fw-normal small">mg/kg</span></span>
                                   </div>
                                   <div className="metric-row">
                                       <span className="metric-label">Soil pH Balance</span>
-                                      <span className="metric-value fw-bold text-success">{data.inputs?.ph || '-'}</span>
+                                      <span className="metric-value fw-bold text-success">{data.ph || '-'}</span>
                                   </div>
                               </div>
                           </div>
@@ -110,15 +110,15 @@ function Result() {
                               <div className="bg-light p-3 rounded-3 border">
                                   <div className="metric-row">
                                       <span className="metric-label">Temperature</span>
-                                      <span className="metric-value">{data.inputs?.temperature || '-'} °C</span>
+                                      <span className="metric-value">{data.temperature || '-'} °C</span>
                                   </div>
                                   <div className="metric-row">
                                       <span className="metric-label">Relative Humidity</span>
-                                      <span className="metric-value">{data.inputs?.humidity || '-'} %</span>
+                                      <span className="metric-value">{data.humidity || '-'} %</span>
                                   </div>
                                   <div className="metric-row">
                                       <span className="metric-label">Annual Rainfall</span>
-                                      <span className="metric-value">{data.inputs?.rainfall || '-'} mm</span>
+                                      <span className="metric-value">{data.rainfall || '-'} mm</span>
                                   </div>
                               </div>
                           </div>
